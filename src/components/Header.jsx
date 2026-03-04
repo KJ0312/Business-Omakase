@@ -134,16 +134,18 @@ export default function Header() {
   return (
     <header className={`header${isSubPage ? ' header-subpage' : ''}`}>
       <div id="google_translate_element" className="google-translate-anchor" />
-      <Link className="header-logo" to="/" onClick={() => setIsOpen(false)}>
+      <Link className="header-logo notranslate" to="/" onClick={() => setIsOpen(false)} translate="no" lang="en">
         Business Omakase
       </Link>
       <div className="header-actions">
         <LanguageSwitcher lang={lang} setLang={setLang} loading={false} />
         <button
-          className="menu-trigger"
+          className="menu-trigger notranslate"
           type="button"
           aria-label="Open menu"
           onClick={() => setIsOpen(true)}
+          translate="no"
+          lang="en"
         >
           <span className="menu-trigger-text">Menu</span>
           <span className="menu-trigger-lines" aria-hidden="true">

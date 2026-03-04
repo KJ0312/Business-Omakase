@@ -168,10 +168,19 @@ export default function ContactSection() {
         <div className="contact-bg-ambient" />
       </div>
 
-      <div className="introLineRow contact-repeat-bottom" aria-label="contact bottom repeat">
-        <span className="introLineLabel">Seoul × Geneva</span>
+      <div
+        className="introLineRow contact-repeat-bottom notranslate"
+        aria-label="contact bottom repeat"
+        translate="no"
+        lang="en"
+      >
+        <span className="introLineLabel notranslate" translate="no" lang="en">
+          Seoul × Geneva
+        </span>
         <span className="introLineTrack" aria-hidden="true" />
-        <span className="introLineLabel introLineAction">contact@businessomakase.com</span>
+        <span className="introLineLabel introLineAction notranslate" translate="no" lang="en">
+          contact@businessomakase.com
+        </span>
       </div>
 
       {isInquiryOpen ? (

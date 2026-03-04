@@ -40,14 +40,16 @@ export default function MenuPanel({ isOpen, onClose }) {
         onMouseLeave={onClose}
         aria-hidden={!isOpen}
       >
-        <nav className="menu-panel-nav" aria-label="menu panel navigation">
+        <nav className="menu-panel-nav notranslate" aria-label="menu panel navigation" translate="no" lang="en">
           {menuItems.map((item, index) => (
             <Link
               key={item.to}
               ref={index === 0 ? firstItemRef : null}
-              className="menu-panel-item"
+              className="menu-panel-item notranslate"
               to={item.to}
               onClick={onClose}
+              translate="no"
+              lang="en"
             >
               <span className="menu-panel-number">{item.number}</span>
               <span className="menu-panel-label">{item.label}</span>

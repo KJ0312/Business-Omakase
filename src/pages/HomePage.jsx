@@ -54,14 +54,18 @@ export default function HomePage() {
           <div className="center-visual-wrap">
             <img className="center-visual" src={CENTER_IMAGE_SRC} alt="Business Omakase visual" />
           </div>
-          <div className="introLineRow">
-            <span className="introLineLabel">Seoul × Geneva</span>
+          <div className="introLineRow notranslate" translate="no" lang="en">
+            <span className="introLineLabel notranslate" translate="no" lang="en">
+              Seoul × Geneva
+            </span>
             <span className="introLineTrack" />
             <button
               type="button"
-              className="introLineLabel introLineAction"
+              className="introLineLabel introLineAction notranslate"
               onClick={scrollToNextSection}
               aria-label="Scroll to discover next section"
+              translate="no"
+              lang="en"
             >
               Scroll to Discover ↓
             </button>
