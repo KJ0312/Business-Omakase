@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function HowItWorksSection({ firstSectionRef }) {
+export default function HowItWorksSection({ firstSectionRef, onScrollNext }) {
   const [isGridActive, setIsGridActive] = useState(false)
 
   const aiAgents = [
@@ -73,6 +73,21 @@ export default function HowItWorksSection({ firstSectionRef }) {
           </div>
         </div>
       </div>
+      <button
+        type="button"
+        className="about-scroll-hint notranslate"
+        onClick={onScrollNext}
+        aria-label="Scroll to services section"
+        translate="no"
+        lang="en"
+      >
+        <span className="notranslate" translate="no" lang="en">
+          Scroll to Discover
+        </span>
+        <span className="about-scroll-arrow" aria-hidden="true">
+          ↓
+        </span>
+      </button>
     </section>
   )
 }
