@@ -39,6 +39,11 @@ export default function HomePage() {
 
     if (location.hash === '#how-it-works') {
       howItWorksSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      return
+    }
+
+    if (location.hash === '#services') {
+      servicesSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }, [location.hash])
 
@@ -83,7 +88,7 @@ export default function HomePage() {
 
       <HowItWorksSection firstSectionRef={howItWorksSectionRef} />
 
-      <section className="home-section home-services-section" ref={servicesSectionRef}>
+      <section className="home-section home-services-section" id="services" ref={servicesSectionRef}>
         <RevealOnScroll>
           <ServicesSection />
         </RevealOnScroll>

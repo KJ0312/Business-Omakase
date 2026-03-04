@@ -3,7 +3,6 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import HomePage from './pages/HomePage'
 import AboutUsPage from './pages/AboutUsPage'
-import ServicePage from './pages/ServicePage'
 import ContactUsPage from './pages/ContactUsPage'
 import PageTransition from './components/transition/PageTransition'
 import DoorTransition from './components/transition/DoorTransition'
@@ -70,11 +69,7 @@ export default function App() {
         />
         <Route
           path="/service"
-          element={
-            <PageTransition>
-              <ServicePage />
-            </PageTransition>
-          }
+          element={<Navigate to="/#services" replace />}
         />
         <Route
           path="/contact"

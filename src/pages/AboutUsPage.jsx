@@ -8,7 +8,7 @@ export default function AboutUsPage() {
       <RevealOnScroll>
         <AboutSection />
       </RevealOnScroll>
-      <Link className="about-page-next-link" to="/service">
+      <Link className="about-page-next-link" to="/#services">
         Services&rarr;
       </Link>
     </main>

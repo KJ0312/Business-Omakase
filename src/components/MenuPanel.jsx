@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const menuItems = [
   { number: '01', label: 'About Us', to: '/aboutus' },
   { number: '02', label: 'How it Works', to: '/#how-it-works' },
-  { number: '03', label: 'Services', to: '/service' },
+  { number: '03', label: 'Services', to: '/#services' },
   { number: '04', label: 'Contact Us', to: '/#contact' },
 ]
 

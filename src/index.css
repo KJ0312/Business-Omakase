@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --font-sans: 'Geist', 'Geist Sans', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --font-sans: 'Geist', 'Geist Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans SC',
+    'Noto Sans TC', 'Noto Sans Arabic', 'Noto Sans Thai', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
   --font-mono: 'Geist Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
   --page-bg: #050505;
 }
@@ -30,6 +31,24 @@ body {
   font-weight: 400;
   line-height: 1.5;
   background: var(--page-bg);
+}
+
+body .skiptranslate iframe,
+body .goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.google-translate-anchor {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
 }
 
 * {
