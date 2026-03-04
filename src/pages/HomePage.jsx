@@ -9,7 +9,6 @@ import RevealOnScroll from '../components/transition/RevealOnScroll'
 const CENTER_IMAGE_SRC = '/main-hero.png?v=20260228'
 
 export default function HomePage() {
-  const heroSectionRef = useRef(null)
   const aboutSectionRef = useRef(null)
   const howItWorksSectionRef = useRef(null)
   const servicesSectionRef = useRef(null)
@@ -32,10 +31,6 @@ export default function HomePage() {
     contactSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  const scrollToHeroSection = () => {
-    heroSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
-
   useEffect(() => {
     if (location.hash === '#contact') {
       contactSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -54,7 +49,7 @@ export default function HomePage() {
 
   return (
     <main className="home-scroll-container">
-      <section className="home-section hero-section" ref={heroSectionRef}>
+      <section className="home-section hero-section">
         <div className="hero-center-wrap introHeroReveal">
           <div className="center-visual-wrap">
             <img className="center-visual" src={CENTER_IMAGE_SRC} alt="Business Omakase visual" />
@@ -126,21 +121,6 @@ export default function HomePage() {
         <RevealOnScroll>
           <ContactSection />
         </RevealOnScroll>
-        <button
-          type="button"
-          className="about-scroll-hint notranslate"
-          onClick={scrollToHeroSection}
-          aria-label="Scroll to discover first section"
-          translate="no"
-          lang="en"
-        >
-          <span className="notranslate" translate="no" lang="en">
-            Scroll to Discover
-          </span>
-          <span className="about-scroll-arrow" aria-hidden="true">
-            ↑
-          </span>
-        </button>
       </section>
     </main>
   )
